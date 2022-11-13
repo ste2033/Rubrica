@@ -40,9 +40,13 @@ namespace Rubrica
         private void hidingForm()
         {
             HomePage homePage = new HomePage();
-            this.Hide();
+            this.Dispose();
             homePage.Show();
+        }
 
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            hidingForm();
         }
     }
 }
