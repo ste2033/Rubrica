@@ -17,5 +17,19 @@ namespace Rubrica
             InitializeComponent();
         }
 
+        private void confermaButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void annullaButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

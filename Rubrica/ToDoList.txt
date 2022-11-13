@@ -1,0 +1,6 @@
+Full screen sempre
+2 Pagine in totale:
+	1 -> Creazione / Modifica / Visualizzazione record (Form1)
+	1 -> Visualizzazione di tutti i record (homepage)
+Salva tutti i dati su un file TXT, così almeno se li tiene sempre in saccoccia
+Tieni sempre e solo un nome, questo funge sia da nome che da cognome, non fare domande
