@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -23,24 +24,42 @@ namespace Rubrica
 
         private void confermaButton_Click(object sender, EventArgs e)
         {
-            hidingForm();
+
         }
 
         private void annullaButton_Click(object sender, EventArgs e)
         {
-            hidingForm();
+            var confirmResult = MessageBox.Show(
+                "Annullare le modifiche?",
+                "ATTENZIONE!",
+                MessageBoxButtons.YesNo);
+
+            if (confirmResult == DialogResult.Yes)
+            {
+                hidingForm();
+                return;
+            }
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void eliminaButton_Click(object sender, EventArgs e)
         {
-            hidingForm();
+            var confirmResult = MessageBox.Show(
+                "STAI PER ELIMINARE QUESTO DATO\nProcedere?",
+                "ATTENZIONE!",
+                MessageBoxButtons.YesNo);
+
+            if(confirmResult == DialogResult.Yes)
+            {
+                hidingForm();
+                return;
+            }
         }
 
         private void hidingForm()
         {
             HomePage homePage = new HomePage();
-            this.Dispose();
+            this.Hide();
             homePage.Show();
         }
 

@@ -37,7 +37,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.confermaButton = new System.Windows.Forms.Button();
             this.annullaButton = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.eliminaButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // codiceTextBox
@@ -134,16 +134,16 @@
             this.annullaButton.UseVisualStyleBackColor = true;
             this.annullaButton.Click += new System.EventHandler(this.annullaButton_Click);
             // 
-            // button1
+            // eliminaButton
             // 
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(305, 271);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(123, 70);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Elimina";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.eliminaButton.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.eliminaButton.Location = new System.Drawing.Point(305, 271);
+            this.eliminaButton.Name = "eliminaButton";
+            this.eliminaButton.Size = new System.Drawing.Size(123, 70);
+            this.eliminaButton.TabIndex = 9;
+            this.eliminaButton.Text = "Elimina";
+            this.eliminaButton.UseVisualStyleBackColor = true;
+            this.eliminaButton.Click += new System.EventHandler(this.eliminaButton_Click);
             // 
             // Form1
             // 
@@ -152,7 +152,7 @@
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(977, 356);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.eliminaButton);
             this.Controls.Add(this.annullaButton);
             this.Controls.Add(this.confermaButton);
             this.Controls.Add(this.label4);
@@ -183,6 +183,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button confermaButton;
         private System.Windows.Forms.Button annullaButton;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button eliminaButton;
     }
 }

@@ -16,9 +16,14 @@ namespace Rubrica
         {
             InitializeComponent();
 
-            rubricaDataGridView.Rows.Add("valore");
-        }
+            //leggi documento
 
+            for(int i = 0; i <100; i++)
+            {
+                rubricaDataGridView.Rows.Add(i+" Codice","Nome","Telefono");
+            }
+
+        }
 
         private void hidingForm(string codice = "", string nome = "", string telefono = "", string note = "")
         {
