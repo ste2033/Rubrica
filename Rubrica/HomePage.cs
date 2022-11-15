@@ -10,6 +10,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Rubrica
 {
@@ -25,7 +26,7 @@ namespace Rubrica
             try
             {
                 string[] lines = System.IO.File.ReadAllLines(rubricaPath);
-                
+
                 int j = 0;
                 foreach (string line in lines)
                 {
@@ -34,7 +35,7 @@ namespace Rubrica
                     j++;
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(
                 "File \"rubrica.txt\" non trovato\n" +
@@ -57,15 +58,7 @@ namespace Rubrica
         {
             Application.Exit();
         }
-        
 
-        private void rubricaDataGridView_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-        }
-
-        private void rubricaDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-        }
 
         private void rubricaDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -115,37 +108,37 @@ namespace Rubrica
                     }
                 }
 
-                hidingForm(CODICE, NOME, TELEFONO, NOTE,e.RowIndex);
+                hidingForm(CODICE, NOME, TELEFONO, NOTE, e.RowIndex);
             }
-        
-    }
 
-        private void ricercaTextBox_TextChanged(object sender, EventArgs e)
+        }
+
+
+        private void ricercaTextBox_KeyUp(object sender, KeyEventArgs e)
         {
-            string searchValue = ricercaTextBox.Text;
-            rubricaDataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             try
             {
-                bool valueResult = false;
-                foreach (DataGridViewRow row in rubricaDataGridView.Rows)
+                for (int i = 0; i < rubricaDataGridView.Rows.Count; i++)
                 {
-                    for (int i = 0; i < row.Cells.Count; i++)
+                    if (rubricaDataGridView.Rows[i].Cells[0].Value.ToString().Contains(ricercaTextBox.Text))
                     {
-                        if (row.Cells[i].Value != null && row.Cells[i].Value.ToString().Equals(searchValue))
-                        {
-                            int rowIndex = row.Index;
-                            rubricaDataGridView.Rows[rowIndex].Selected = true;
-                            valueResult = true;
-                            break;
-                        }
+                        rubricaDataGridView.Rows[i].Visible = true;
                     }
-
+                    else if (rubricaDataGridView.Rows[i].Cells[1].Value.ToString().Contains(ricercaTextBox.Text))
+                    {
+                        rubricaDataGridView.Rows[i].Visible = true;
+                    }
+                    else if (rubricaDataGridView.Rows[i].Cells[2].Value.ToString().Contains(ricercaTextBox.Text))
+                    {
+                        rubricaDataGridView.Rows[i].Visible = true;
+                    }
+                    else
+                    {
+                        rubricaDataGridView.Rows[i].Visible = false;
+                    }
                 }
             }
-            catch (Exception exc)
-            {
-                MessageBox.Show(exc.Message);
-            }
+            catch (Exception ex) { }
         }
     }
 }
