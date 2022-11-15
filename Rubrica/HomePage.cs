@@ -1,8 +1,10 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
@@ -17,13 +19,31 @@ namespace Rubrica
         {
             InitializeComponent();
 
-            //leggi documento
+            //leggi file
 
-            for(int i = 0; i <100; i++)
+            string rubricaPath = Directory.GetCurrentDirectory() + "/rubrica.txt";
+            try
             {
-                rubricaDataGridView.Rows.Add(i+" Codice","Nome","Telefono");
+                string[] lines = System.IO.File.ReadAllLines(rubricaPath);
+                
+                int j = 0;
+                foreach (string line in lines)
+                {
+                    string[] parts = line.Split("|");
+                    rubricaDataGridView.Rows.Insert(j, parts);
+                    j++;
+                }
             }
+            catch(Exception ex)
+            {
+                MessageBox.Show(
+                "File \"rubrica.txt\" non trovato\n" +
+                "Il file verrà creato",
+                "ATTENZIONE!",
+                MessageBoxButtons.OK);
 
+                System.IO.File.Create(rubricaPath);
+            }
         }
 
         private void hidingForm(string codice = "", string nome = "", string telefono = "", string note = "")

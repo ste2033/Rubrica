@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Configuration;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,9 +23,28 @@ namespace Rubrica
             noteTextBox.Text = note;
         }
 
+        /// <summary>
+        /// Salva sul file le variabili
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void confermaButton_Click(object sender, EventArgs e)
         {
-            //salva sul file
+
+            string curFile = Directory.GetCurrentDirectory() + "/rubrica.txt";
+
+            List<string> stringa = new List<string>
+            {
+                codiceTextBox.Text + " | " +
+                nomeTextBox.Text + " | " +
+                telefonoTextBox.Text + " | " +
+                noteTextBox.Text +
+                Environment.NewLine
+            };
+
+
+            System.IO.File.AppendAllLines(curFile, stringa);
+
             hidingForm();
             return;
         }
