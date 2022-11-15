@@ -14,13 +14,17 @@ namespace Rubrica
 {
     public partial class Form1 : Form
     {
-        public Form1(string codice = "", string nome = "", string telefono = "", string note = "")
+        string RUBRICAPATH = Directory.GetCurrentDirectory() + "/rubrica.txt";
+        int INDEX = -1;
+
+        public Form1(string codice = "", string nome = "", string telefono = "", string note = "",int index= 0)
         {
             InitializeComponent();
             codiceTextBox.Text = codice;
             nomeTextBox.Text = nome;
             telefonoTextBox.Text = telefono;
             noteTextBox.Text = note;
+            INDEX = index; 
         }
 
         /// <summary>
@@ -30,20 +34,16 @@ namespace Rubrica
         /// <param name="e"></param>
         private void confermaButton_Click(object sender, EventArgs e)
         {
-
-            string curFile = Directory.GetCurrentDirectory() + "/rubrica.txt";
-
             List<string> stringa = new List<string>
             {
                 codiceTextBox.Text + " | " +
                 nomeTextBox.Text + " | " +
                 telefonoTextBox.Text + " | " +
-                noteTextBox.Text +
-                Environment.NewLine
+                noteTextBox.Text 
             };
 
 
-            System.IO.File.AppendAllLines(curFile, stringa);
+            System.IO.File.AppendAllLines(RUBRICAPATH, stringa);
 
             hidingForm();
             return;
@@ -74,6 +74,30 @@ namespace Rubrica
             if(confirmResult == DialogResult.Yes)
             {
                 //rimuovi dal file
+
+                string tempFile = Path.GetTempFileName();
+
+                using (var sr = new StreamReader(RUBRICAPATH))
+                using (var sw = new StreamWriter(tempFile))
+                {
+                    string[] lines = System.IO.File.ReadAllLines(RUBRICAPATH);
+
+                    int j = 0;
+                    foreach (string line in lines)
+                    {
+                        string[] parts = line.Split("|");
+                        if (j != INDEX)
+                        {
+                            sw.WriteLine(line);
+                        }
+                        j++;
+                    }
+                }
+
+                File.Delete(RUBRICAPATH);
+                File.Move(tempFile, RUBRICAPATH);
+
+
                 hidingForm();
                 return;
             }

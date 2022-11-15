@@ -46,9 +46,9 @@ namespace Rubrica
             }
         }
 
-        private void hidingForm(string codice = "", string nome = "", string telefono = "", string note = "")
+        private void hidingForm(string codice = "", string nome = "", string telefono = "", string note = "", int index = 0)
         {
-            Form1 form1 = new Form1(codice, nome, telefono, note);
+            Form1 form1 = new Form1(codice, nome, telefono, note, index);
             this.Hide();
             form1.Show();
         }
@@ -115,7 +115,7 @@ namespace Rubrica
                     }
                 }
 
-                hidingForm(CODICE, NOME, TELEFONO, NOTE);
+                hidingForm(CODICE, NOME, TELEFONO, NOTE,e.RowIndex);
             }
         
     }
