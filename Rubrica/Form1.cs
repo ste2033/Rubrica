@@ -24,7 +24,9 @@ namespace Rubrica
 
         private void confermaButton_Click(object sender, EventArgs e)
         {
-
+            //salva sul file
+            hidingForm();
+            return;
         }
 
         private void annullaButton_Click(object sender, EventArgs e)
@@ -51,6 +53,7 @@ namespace Rubrica
 
             if(confirmResult == DialogResult.Yes)
             {
+                //rimuovi dal file
                 hidingForm();
                 return;
             }

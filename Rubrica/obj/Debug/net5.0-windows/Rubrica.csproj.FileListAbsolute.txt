@@ -17,4 +17,3 @@ C:\Users\stefa\source\repos\Rubrica\Rubrica\obj\Debug\net5.0-windows\Rubrica.pdb
 C:\Users\stefa\source\repos\Rubrica\Rubrica\obj\Debug\net5.0-windows\Rubrica.genruntimeconfig.cache
 C:\Users\stefa\source\repos\Rubrica\Rubrica\obj\Debug\net5.0-windows\ref\Rubrica.dll
 C:\Users\stefa\source\repos\Rubrica\Rubrica\obj\Debug\net5.0-windows\Rubrica.HomePage.resources
-C:\Users\stefa\source\repos\Rubrica\Rubrica\obj\Debug\net5.0-windows\Rubrica.DialogWindow.resources
