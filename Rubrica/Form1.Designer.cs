@@ -80,6 +80,7 @@
             this.noteTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.noteTextBox.Size = new System.Drawing.Size(512, 329);
             this.noteTextBox.TabIndex = 5;
+            this.noteTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.noteTextBox_KeyPress);
             // 
             // label1
             // 

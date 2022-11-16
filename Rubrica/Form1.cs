@@ -26,7 +26,13 @@ namespace Rubrica
             codiceTextBox.Text = codice;
             nomeTextBox.Text = nome;
             telefonoTextBox.Text = telefono;
-            noteTextBox.Text = note;
+
+            if(note != "")
+            {
+                noteTextBox.Text = note;
+                noteTextBox.Text = noteTextBox.Text.Replace("§",System.Environment.NewLine); //add a line terminating ;
+            }
+
             INDEX = index;
 
             if (codice != "" || nome != "" || telefono != "" || note != "")
@@ -42,7 +48,7 @@ namespace Rubrica
         /// <param name="e"></param>
         private void confermaButton_Click(object sender, EventArgs e)
         {
-            if(codiceTextBox.Text == "" && nomeTextBox.Text == "" && telefonoTextBox.Text == "" && noteTextBox.Text == "")
+            if (codiceTextBox.Text == "" && nomeTextBox.Text == "" && telefonoTextBox.Text == "" && noteTextBox.Text == "")
             {
                 MessageBox.Show(
                 "NESSUN DATO INSERITO",
@@ -51,7 +57,7 @@ namespace Rubrica
 
                 return;
             }
-            
+
             if (DAMODIFICARE)
             {
                 string tempFile = Path.GetTempFileName();
@@ -71,12 +77,14 @@ namespace Rubrica
                         }
                         else
                         {
+                            noteTextBox.Text = noteTextBox.Text.Replace(System.Environment.NewLine, "§"); //add a line terminating ;
+
                             string stringa =
-                codiceTextBox.Text + "|" +
-                nomeTextBox.Text + "|" +
-                telefonoTextBox.Text + "|" +
-                noteTextBox.Text
-                ;
+                                codiceTextBox.Text + "|" +
+                                nomeTextBox.Text + "|" +
+                                telefonoTextBox.Text + "|" +
+                                noteTextBox.Text;
+
                             sw.WriteLine(stringa);
                         }
 
@@ -89,13 +97,14 @@ namespace Rubrica
             }
             else
             {
+                noteTextBox.Text = noteTextBox.Text.Replace(System.Environment.NewLine, "§"); //add a line terminating ;
 
-                List<string> stringa = new List<string>{
-                codiceTextBox.Text + "|" +
+                string value = codiceTextBox.Text + "|" +
                 nomeTextBox.Text + "|" +
                 telefonoTextBox.Text + "|" +
-                noteTextBox.Text
-                };
+                noteTextBox.Text;
+
+                List<string> stringa = new List<string> { value };
 
                 System.IO.File.AppendAllLines(RUBRICAPATH, stringa);
             }
@@ -176,6 +185,14 @@ namespace Rubrica
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
         {
             hidingForm();
+        }
+
+        private void noteTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar.ToString() == "|" || e.KeyChar.ToString() == "§") 
+            {
+                e.Handled = true;
+            }
         }
     }
 }
