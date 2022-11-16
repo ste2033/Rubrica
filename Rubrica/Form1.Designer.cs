@@ -69,7 +69,6 @@
             // 
             // noteTextBox
             // 
-            this.noteTextBox.AcceptsReturn = true;
             this.noteTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -78,7 +77,7 @@
             this.noteTextBox.Multiline = true;
             this.noteTextBox.Name = "noteTextBox";
             this.noteTextBox.PlaceholderText = "Note";
-            this.noteTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.noteTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.noteTextBox.Size = new System.Drawing.Size(512, 329);
             this.noteTextBox.TabIndex = 5;
             // 

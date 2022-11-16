@@ -42,6 +42,16 @@ namespace Rubrica
         /// <param name="e"></param>
         private void confermaButton_Click(object sender, EventArgs e)
         {
+            if(codiceTextBox.Text == "" && nomeTextBox.Text == "" && telefonoTextBox.Text == "" && noteTextBox.Text == "")
+            {
+                MessageBox.Show(
+                "NESSUN DATO INSERITO",
+                "ATTENZIONE!",
+                MessageBoxButtons.OK);
+
+                return;
+            }
+            
             if (DAMODIFICARE)
             {
                 string tempFile = Path.GetTempFileName();
@@ -62,9 +72,9 @@ namespace Rubrica
                         else
                         {
                             string stringa =
-                codiceTextBox.Text + " | " +
-                nomeTextBox.Text + " | " +
-                telefonoTextBox.Text + " | " +
+                codiceTextBox.Text + "|" +
+                nomeTextBox.Text + "|" +
+                telefonoTextBox.Text + "|" +
                 noteTextBox.Text
                 ;
                             sw.WriteLine(stringa);
@@ -81,9 +91,9 @@ namespace Rubrica
             {
 
                 List<string> stringa = new List<string>{
-                codiceTextBox.Text + " | " +
-                nomeTextBox.Text + " | " +
-                telefonoTextBox.Text + " | " +
+                codiceTextBox.Text + "|" +
+                nomeTextBox.Text + "|" +
+                telefonoTextBox.Text + "|" +
                 noteTextBox.Text
                 };
 
@@ -111,40 +121,48 @@ namespace Rubrica
 
         private void eliminaButton_Click(object sender, EventArgs e)
         {
-            var confirmResult = MessageBox.Show(
+            if (DAMODIFICARE)
+            {
+                var confirmResult = MessageBox.Show(
                 "STAI PER ELIMINARE QUESTO DATO\nProcedere?",
                 "ATTENZIONE!",
                 MessageBoxButtons.YesNo);
 
-            if (confirmResult == DialogResult.Yes)
-            {
-                //rimuovi dal file
-
-                string tempFile = Path.GetTempFileName();
-
-                using (var sr = new StreamReader(RUBRICAPATH))
-                using (var sw = new StreamWriter(tempFile))
+                if (confirmResult == DialogResult.Yes)
                 {
-                    string[] lines = System.IO.File.ReadAllLines(RUBRICAPATH);
+                    //rimuovi dal file
 
-                    int j = 0;
-                    foreach (string line in lines)
+                    string tempFile = Path.GetTempFileName();
+
+                    using (var sr = new StreamReader(RUBRICAPATH))
+                    using (var sw = new StreamWriter(tempFile))
                     {
-                        string[] parts = line.Split("|");
-                        if (j != INDEX)
+                        string[] lines = System.IO.File.ReadAllLines(RUBRICAPATH);
+
+                        int j = 0;
+                        foreach (string line in lines)
                         {
-                            sw.WriteLine(line);
+                            string[] parts = line.Split("|");
+                            if (j != INDEX)
+                            {
+                                sw.WriteLine(line);
+                            }
+                            j++;
                         }
-                        j++;
                     }
+
+                    File.Delete(RUBRICAPATH);
+                    File.Move(tempFile, RUBRICAPATH);
+
+
+                    hidingForm();
+                    return;
                 }
 
-                File.Delete(RUBRICAPATH);
-                File.Move(tempFile, RUBRICAPATH);
-
-
-                hidingForm();
-                return;
+            }
+            else
+            {
+                annullaButton_Click(sender, e);
             }
         }
 

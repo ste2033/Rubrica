@@ -73,6 +73,7 @@ namespace Rubrica
             if (row == -1)//head
             {
                 //ricerca all'interno della testa
+                return;
             }
             else
             {
@@ -140,5 +141,6 @@ namespace Rubrica
             }
             catch (Exception ex) { }
         }
+
     }
 }

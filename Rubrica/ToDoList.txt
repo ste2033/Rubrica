@@ -6,5 +6,5 @@ Salva tutti i dati su un file TXT, così almeno se li tiene sempre in saccoccia
 Tieni sempre e solo un nome, questo funge sia da nome che da cognome, non fare domande
 
 Ricerca -> doppio tap sul nome ed effettui la ricerca
-Righe -> auto size
+Righe -> auto size / FIXED BUT WHIDE
 Open record -> tap sulla riga
