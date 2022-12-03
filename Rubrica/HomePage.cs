@@ -50,8 +50,8 @@ namespace Rubrica
         private void hidingForm(string codice = "", string nome = "", string telefono = "", string note = "", int index = 0)
         {
             Form1 form1 = new Form1(codice, nome, telefono, note, index);
-            this.Hide();
             form1.Show();
+            this.Hide();
         }
 
         private void HomePage_FormClosed(object sender, FormClosedEventArgs e)

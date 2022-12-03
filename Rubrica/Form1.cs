@@ -178,8 +178,8 @@ namespace Rubrica
         private void hidingForm()
         {
             HomePage homePage = new HomePage();
-            this.Hide();
             homePage.Show();
+            this.Dispose();
         }
 
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
