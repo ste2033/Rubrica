@@ -142,5 +142,9 @@ namespace Rubrica
             catch (Exception ex) { }
         }
 
+        private void newData_Click(object sender, EventArgs e)
+        {
+            hidingForm();
+        }
     }
 }

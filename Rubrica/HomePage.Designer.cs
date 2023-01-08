@@ -34,11 +34,12 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.rubricaDataGridView = new System.Windows.Forms.DataGridView();
-            this.ricercaTextBox = new System.Windows.Forms.TextBox();
             this.Codice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Note = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ricercaTextBox = new System.Windows.Forms.TextBox();
+            this.newData = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.rubricaDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -74,7 +75,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.rubricaDataGridView.DefaultCellStyle = dataGridViewCellStyle3;
             this.rubricaDataGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
-            this.rubricaDataGridView.Location = new System.Drawing.Point(12, 12);
+            this.rubricaDataGridView.Location = new System.Drawing.Point(12, 47);
             this.rubricaDataGridView.Name = "rubricaDataGridView";
             this.rubricaDataGridView.ReadOnly = true;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
@@ -95,23 +96,9 @@
             this.rubricaDataGridView.RowTemplate.ReadOnly = true;
             this.rubricaDataGridView.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.rubricaDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.rubricaDataGridView.Size = new System.Drawing.Size(1165, 508);
+            this.rubricaDataGridView.Size = new System.Drawing.Size(1165, 473);
             this.rubricaDataGridView.TabIndex = 0;
             this.rubricaDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.rubricaDataGridView_CellClick);
-            // 
-            // ricercaTextBox
-            // 
-            this.ricercaTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ricercaTextBox.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.ricercaTextBox.Location = new System.Drawing.Point(12, 113);
-            this.ricercaTextBox.Name = "ricercaTextBox";
-            this.ricercaTextBox.PlaceholderText = "Ricerca...";
-            this.ricercaTextBox.Size = new System.Drawing.Size(1165, 43);
-            this.ricercaTextBox.TabIndex = 1;
-            this.ricercaTextBox.Visible = false;
-            this.ricercaTextBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.ricercaTextBox_KeyUp);
             // 
             // Codice
             // 
@@ -156,20 +143,49 @@
             this.Note.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.Note.Visible = false;
             // 
+            // ricercaTextBox
+            // 
+            this.ricercaTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ricercaTextBox.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ricercaTextBox.Location = new System.Drawing.Point(12, 461);
+            this.ricercaTextBox.Name = "ricercaTextBox";
+            this.ricercaTextBox.PlaceholderText = "Ricerca...";
+            this.ricercaTextBox.Size = new System.Drawing.Size(1165, 43);
+            this.ricercaTextBox.TabIndex = 1;
+            this.ricercaTextBox.Visible = false;
+            this.ricercaTextBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.ricercaTextBox_KeyUp);
+            // 
+            // newData
+            // 
+            this.newData.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.newData.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.newData.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.newData.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.newData.Location = new System.Drawing.Point(12, 1);
+            this.newData.Name = "newData";
+            this.newData.Size = new System.Drawing.Size(1165, 38);
+            this.newData.TabIndex = 2;
+            this.newData.Text = "Nuovo dato";
+            this.newData.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.newData.UseVisualStyleBackColor = true;
+            this.newData.Click += new System.EventHandler(this.newData_Click);
+            // 
             // HomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.AutoSize = true;
-            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1189, 532);
+            this.Controls.Add(this.newData);
             this.Controls.Add(this.ricercaTextBox);
             this.Controls.Add(this.rubricaDataGridView);
             this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Name = "HomePage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HomePage";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.HomePage_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.rubricaDataGridView)).EndInit();
             this.ResumeLayout(false);
@@ -185,5 +201,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
         private System.Windows.Forms.DataGridViewTextBoxColumn Telefono;
         private System.Windows.Forms.DataGridViewTextBoxColumn Note;
+        private System.Windows.Forms.Button newData;
     }
 }
