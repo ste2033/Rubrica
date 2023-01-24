@@ -25,7 +25,7 @@ namespace Rubrica
             string rubricaPath = Directory.GetCurrentDirectory() + "/rubrica.txt";
             try
             {
-                string[] lines = System.IO.File.ReadAllLines(rubricaPath);
+                IEnumerable<string> lines = System.IO.File.ReadAllLines(rubricaPath).Reverse();
 
                 int j = 0;
                 foreach (string line in lines)
@@ -37,15 +37,21 @@ namespace Rubrica
             }
             catch (Exception ex)
             {
+                System.Diagnostics.Debug.WriteLine(ex);
                 MessageBox.Show(
                 "File \"rubrica.txt\" non trovato\n" +
                 "Il file verrà creato",
                 "ATTENZIONE!",
                 MessageBoxButtons.OK);
 
-                System.IO.File.Create(rubricaPath);
+                var myFile = System.IO.File.Create(rubricaPath);
+
+                myFile.Close();
             }
+
+            
         }
+
 
         private void hidingForm(string codice = "", string nome = "", string telefono = "", string note = "", int index = 0)
         {

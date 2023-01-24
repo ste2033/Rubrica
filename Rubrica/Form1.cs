@@ -107,6 +107,7 @@ namespace Rubrica
                 List<string> stringa = new List<string> { value };
 
                 System.IO.File.AppendAllLines(RUBRICAPATH, stringa);
+
             }
 
             hidingForm();
@@ -115,17 +116,8 @@ namespace Rubrica
 
         private void annullaButton_Click(object sender, EventArgs e)
         {
-            var confirmResult = MessageBox.Show(
-                "Annullare le modifiche?",
-                "ATTENZIONE!",
-                MessageBoxButtons.YesNo);
-
-            if (confirmResult == DialogResult.Yes)
-            {
-                hidingForm();
-                return;
-            }
-
+            hidingForm();
+            return;
         }
 
         private void eliminaButton_Click(object sender, EventArgs e)
