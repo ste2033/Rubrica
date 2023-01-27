@@ -75,7 +75,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.rubricaDataGridView.DefaultCellStyle = dataGridViewCellStyle3;
             this.rubricaDataGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
-            this.rubricaDataGridView.Location = new System.Drawing.Point(12, 47);
+            this.rubricaDataGridView.Location = new System.Drawing.Point(12, 45);
             this.rubricaDataGridView.Name = "rubricaDataGridView";
             this.rubricaDataGridView.ReadOnly = true;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
@@ -96,7 +96,7 @@
             this.rubricaDataGridView.RowTemplate.ReadOnly = true;
             this.rubricaDataGridView.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.rubricaDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.rubricaDataGridView.Size = new System.Drawing.Size(1165, 473);
+            this.rubricaDataGridView.Size = new System.Drawing.Size(958, 296);
             this.rubricaDataGridView.TabIndex = 0;
             this.rubricaDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.rubricaDataGridView_CellClick);
             // 
@@ -152,7 +152,7 @@
             this.ricercaTextBox.Location = new System.Drawing.Point(12, 461);
             this.ricercaTextBox.Name = "ricercaTextBox";
             this.ricercaTextBox.PlaceholderText = "Ricerca...";
-            this.ricercaTextBox.Size = new System.Drawing.Size(1165, 43);
+            this.ricercaTextBox.Size = new System.Drawing.Size(958, 43);
             this.ricercaTextBox.TabIndex = 1;
             this.ricercaTextBox.Visible = false;
             this.ricercaTextBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.ricercaTextBox_KeyUp);
@@ -166,7 +166,7 @@
             this.newData.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.newData.Location = new System.Drawing.Point(12, 1);
             this.newData.Name = "newData";
-            this.newData.Size = new System.Drawing.Size(1165, 38);
+            this.newData.Size = new System.Drawing.Size(958, 38);
             this.newData.TabIndex = 2;
             this.newData.Text = "Nuovo dato";
             this.newData.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -175,17 +175,18 @@
             // 
             // HomePage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(1189, 532);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.ClientSize = new System.Drawing.Size(982, 353);
             this.Controls.Add(this.newData);
             this.Controls.Add(this.ricercaTextBox);
             this.Controls.Add(this.rubricaDataGridView);
             this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Name = "HomePage";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "HomePage";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.HomePage_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.HomePage_FormClosed);
+            this.Load += new System.EventHandler(this.HomePage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.rubricaDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

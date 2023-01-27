@@ -25,7 +25,7 @@ namespace Rubrica
             string rubricaPath = Directory.GetCurrentDirectory() + "/rubrica.txt";
             try
             {
-                IEnumerable<string> lines = System.IO.File.ReadAllLines(rubricaPath).Reverse();
+                string[] lines = System.IO.File.ReadAllLines(rubricaPath);
 
                 int j = 0;
                 foreach (string line in lines)
@@ -48,13 +48,14 @@ namespace Rubrica
 
                 myFile.Close();
             }
+            rubricaDataGridView.FirstDisplayedScrollingRowIndex = rubricaDataGridView.RowCount - 1;
 
-            
         }
 
 
         private void hidingForm(string codice = "", string nome = "", string telefono = "", string note = "", int index = 0)
         {
+            HomePage_FormClosing(null,null);
             Form1 form1 = new Form1(codice, nome, telefono, note, index);
             form1.Show();
             this.Hide();
@@ -151,6 +152,48 @@ namespace Rubrica
         private void newData_Click(object sender, EventArgs e)
         {
             hidingForm();
+        }
+
+        private void HomePage_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if ((ModifierKeys & Keys.Shift) == 0)
+            {
+                Point location = Location;
+                Size size = Size;
+                if (WindowState != FormWindowState.Normal)
+                {
+                    location = RestoreBounds.Location;
+                    size = RestoreBounds.Size;
+                }
+                string initLocation = string.Join(",", location.X, location.Y, size.Width, size.Height);
+                Properties.Settings.Default.Location = initLocation;
+                Properties.Settings.Default.Save();
+            }
+        }
+
+        private void HomePage_Load(object sender, EventArgs e)
+        {
+            if ((ModifierKeys & Keys.Shift) == 0)
+            {
+                string initLocation = Properties.Settings.Default.Location;
+                Point il = new Point(0, 0);
+                Size sz = Size;
+                if (!string.IsNullOrWhiteSpace(initLocation))
+                {
+                    string[] parts = initLocation.Split(',');
+                    if (parts.Length >= 2)
+                    {
+                        il = new Point(int.Parse(parts[0]), int.Parse(parts[1]));
+                    }
+                    if (parts.Length >= 4)
+                    {
+                        sz = new Size(int.Parse(parts[2]), int.Parse(parts[3]));
+                    }
+                }
+                Size = sz;
+                Location = il;
+            }
+
         }
     }
 }

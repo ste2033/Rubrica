@@ -516,3 +516,10 @@ C:\Users\stefa\source\repos\Rubrica\Rubrica\obj\Release\net5.0-windows\win-x86\r
 C:\Users\stefa\source\repos\Rubrica\Rubrica\obj\Release\net5.0-windows\win-x86\Rubrica.pdb
 C:\Users\stefa\source\repos\Rubrica\Rubrica\obj\Release\net5.0-windows\win-x86\Rubrica.genruntimeconfig.cache
 C:\Users\stefa\source\repos\Rubrica\Rubrica\obj\Release\net5.0-windows\win-x86\ref\Rubrica.dll
+C:\Users\stefa\source\repos\Rubrica\Rubrica\bin\Release\net5.0-windows\win-x86\Xamarin.Essentials.dll
+C:\Users\stefa\source\repos\Rubrica\Rubrica\bin\Release\net5.0-windows\win-x86\Xamarin.Forms.Core.dll
+C:\Users\stefa\source\repos\Rubrica\Rubrica\bin\Release\net5.0-windows\win-x86\Xamarin.Forms.Platform.dll
+C:\Users\stefa\source\repos\Rubrica\Rubrica\bin\Release\net5.0-windows\win-x86\Xamarin.Forms.Xaml.dll
+C:\Users\stefa\source\repos\Rubrica\Rubrica\bin\Release\net5.0-windows\win-x86\Rubrica.dll.config
+C:\Users\stefa\source\repos\Rubrica\Rubrica\obj\Release\net5.0-windows\win-x86\Rubrica.csproj.ResolveComReference.cache
+C:\Users\stefa\source\repos\Rubrica\Rubrica\obj\Release\net5.0-windows\win-x86\Rubrica.Properties.Resources.resources

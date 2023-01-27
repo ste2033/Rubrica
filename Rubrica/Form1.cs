@@ -169,6 +169,7 @@ namespace Rubrica
 
         private void hidingForm()
         {
+            Form1_FormClosing(null, null);
             HomePage homePage = new HomePage();
             homePage.Show();
             this.Dispose();
@@ -185,6 +186,49 @@ namespace Rubrica
             {
                 e.Handled = true;
             }
+        }
+
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if ((ModifierKeys & Keys.Shift) == 0)
+            {
+                Point location = Location;
+                Size size = Size;
+                if (WindowState != FormWindowState.Normal)
+                {
+                    location = RestoreBounds.Location;
+                    size = RestoreBounds.Size;
+                }
+                string initLocation = string.Join(",", location.X, location.Y, size.Width, size.Height);
+                Properties.Settings.Default.LocationForm = initLocation;
+                Properties.Settings.Default.Save();
+            }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            if ((ModifierKeys & Keys.Shift) == 0)
+            {
+                string initLocation = Properties.Settings.Default.LocationForm;
+                Point il = new Point(0, 0);
+                Size sz = Size;
+                if (!string.IsNullOrWhiteSpace(initLocation))
+                {
+                    string[] parts = initLocation.Split(',');
+                    if (parts.Length >= 2)
+                    {
+                        il = new Point(int.Parse(parts[0]), int.Parse(parts[1]));
+                    }
+                    if (parts.Length >= 4)
+                    {
+                        sz = new Size(int.Parse(parts[2]), int.Parse(parts[3]));
+                    }
+                }
+                Size = sz;
+                Location = il;
+            }
+
         }
     }
 }

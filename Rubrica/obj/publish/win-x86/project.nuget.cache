@@ -1,12 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "hJn/ozgSuqaWW/fQtNpg5LsCDaD8VRMoBinqGeUNVkLPd6lnaU4TqnULZjN4bEu+VM0v5jm4bsE9kRi66O+H9g==",
+  "dgSpecHash": "UlRT5vFwHqrRei7iBqVw1BaOqhqrevGW47Qit+ChH1kk3ZYXew17MW1zLHobB/U/ZoU9pJjj21DP3jnNHpBfmw==",
   "success": true,
   "projectFilePath": "C:\\Users\\stefa\\source\\repos\\Rubrica\\Rubrica\\Rubrica.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\stefa\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\stefa\\.nuget\\packages\\xamarin.essentials\\1.7.4\\xamarin.essentials.1.7.4.nupkg.sha512",
+    "C:\\Users\\stefa\\.nuget\\packages\\xamarin.forms\\5.0.0.2545\\xamarin.forms.5.0.0.2545.nupkg.sha512",
     "C:\\Users\\stefa\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x86\\5.0.17\\microsoft.netcore.app.runtime.win-x86.5.0.17.nupkg.sha512",
     "C:\\Users\\stefa\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x86\\5.0.17\\microsoft.windowsdesktop.app.runtime.win-x86.5.0.17.nupkg.sha512",
-    "C:\\Users\\stefa\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x86\\5.0.17\\microsoft.aspnetcore.app.runtime.win-x86.5.0.17.nupkg.sha512"
+    "C:\\Users\\stefa\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x86\\5.0.17\\microsoft.aspnetcore.app.runtime.win-x86.5.0.17.nupkg.sha512",
+    "C:\\Users\\stefa\\.nuget\\packages\\microsoft.netcore.app.host.win-x86\\5.0.17\\microsoft.netcore.app.host.win-x86.5.0.17.nupkg.sha512"
   ],
   "logs": []
 }
