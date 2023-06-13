@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\stefa\\source\\repos\\Rubrica\\Rubrica\\Rubrica.csproj": {}
+    "C:\\Users\\stefa\\source\\repos\\Rubrica\\Windows\\Rubrica\\Rubrica.csproj": {}
   },
   "projects": {
-    "C:\\Users\\stefa\\source\\repos\\Rubrica\\Rubrica\\Rubrica.csproj": {
+    "C:\\Users\\stefa\\source\\repos\\Rubrica\\Windows\\Rubrica\\Rubrica.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\stefa\\source\\repos\\Rubrica\\Rubrica\\Rubrica.csproj",
+        "projectUniqueName": "C:\\Users\\stefa\\source\\repos\\Rubrica\\Windows\\Rubrica\\Rubrica.csproj",
         "projectName": "Rubrica",
-        "projectPath": "C:\\Users\\stefa\\source\\repos\\Rubrica\\Rubrica\\Rubrica.csproj",
+        "projectPath": "C:\\Users\\stefa\\source\\repos\\Rubrica\\Windows\\Rubrica\\Rubrica.csproj",
         "packagesPath": "C:\\Users\\stefa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\stefa\\source\\repos\\Rubrica\\Rubrica\\obj\\",
+        "outputPath": "C:\\Users\\stefa\\source\\repos\\Rubrica\\Windows\\Rubrica\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
