@@ -44,16 +44,6 @@
       "frameworks": {
         "net5.0-windows7.0": {
           "targetAlias": "net5.0-windows",
-          "dependencies": {
-            "Xamarin.Essentials": {
-              "target": "Package",
-              "version": "[1.7.4, )"
-            },
-            "Xamarin.Forms": {
-              "target": "Package",
-              "version": "[5.0.0.2545, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",

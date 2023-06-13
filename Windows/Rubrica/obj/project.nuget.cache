@@ -1,12 +1,9 @@
 {
   "version": 2,
-  "dgSpecHash": "WGKVcvNU+q/66HE8Pf7DdgeTiPt3XQSqoUZTPAMqygLDFfrTi4vj1Bc3m7D0VB2o2JgYzFDy4L7zF44i430cnw==",
+  "dgSpecHash": "rhZx3RUmOJGjCJUnMj8kxCyMA51dbn4WJvxF3FA+gIqd4TSvQnbmmedXCgA7jlTp0j3A2NiRbNHnL1q1NoPF6g==",
   "success": true,
   "projectFilePath": "C:\\Users\\stefa\\source\\repos\\Rubrica\\Windows\\Rubrica\\Rubrica.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\stefa\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
-    "C:\\Users\\stefa\\.nuget\\packages\\xamarin.essentials\\1.7.4\\xamarin.essentials.1.7.4.nupkg.sha512",
-    "C:\\Users\\stefa\\.nuget\\packages\\xamarin.forms\\5.0.0.2545\\xamarin.forms.5.0.0.2545.nupkg.sha512",
     "C:\\Users\\stefa\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.17\\microsoft.netcore.app.host.win-x64.5.0.17.nupkg.sha512"
   ],
   "logs": []
