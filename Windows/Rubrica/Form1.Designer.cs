@@ -28,155 +28,165 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.codiceTextBox = new System.Windows.Forms.TextBox();
-            this.nomeTextBox = new System.Windows.Forms.TextBox();
-            this.telefonoTextBox = new System.Windows.Forms.TextBox();
-            this.noteTextBox = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.confermaButton = new System.Windows.Forms.Button();
-            this.annullaButton = new System.Windows.Forms.Button();
-            this.eliminaButton = new System.Windows.Forms.Button();
-            this.SuspendLayout();
+            codiceTextBox = new System.Windows.Forms.TextBox();
+            nomeTextBox = new System.Windows.Forms.TextBox();
+            telefonoTextBox = new System.Windows.Forms.TextBox();
+            noteTextBox = new System.Windows.Forms.TextBox();
+            codiceLabel = new System.Windows.Forms.Label();
+            nomeLabel = new System.Windows.Forms.Label();
+            telefonoLabel = new System.Windows.Forms.Label();
+            confermaButton = new System.Windows.Forms.Button();
+            annullaButton = new System.Windows.Forms.Button();
+            eliminaButton = new System.Windows.Forms.Button();
+            noteLabel = new System.Windows.Forms.Label();
+            SuspendLayout();
             // 
             // codiceTextBox
             // 
-            this.codiceTextBox.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.codiceTextBox.Location = new System.Drawing.Point(189, 23);
-            this.codiceTextBox.Name = "codiceTextBox";
-            this.codiceTextBox.PlaceholderText = "Codice";
-            this.codiceTextBox.Size = new System.Drawing.Size(239, 43);
-            this.codiceTextBox.TabIndex = 1;
+            codiceTextBox.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            codiceTextBox.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            codiceTextBox.Location = new System.Drawing.Point(397, 23);
+            codiceTextBox.Name = "codiceTextBox";
+            codiceTextBox.PlaceholderText = "Codice";
+            codiceTextBox.Size = new System.Drawing.Size(785, 43);
+            codiceTextBox.TabIndex = 1;
             // 
             // nomeTextBox
             // 
-            this.nomeTextBox.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.nomeTextBox.Location = new System.Drawing.Point(189, 72);
-            this.nomeTextBox.Name = "nomeTextBox";
-            this.nomeTextBox.PlaceholderText = "Nome/Cognome";
-            this.nomeTextBox.Size = new System.Drawing.Size(239, 43);
-            this.nomeTextBox.TabIndex = 2;
+            nomeTextBox.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            nomeTextBox.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            nomeTextBox.Location = new System.Drawing.Point(397, 72);
+            nomeTextBox.Name = "nomeTextBox";
+            nomeTextBox.PlaceholderText = "Nome/Cognome";
+            nomeTextBox.Size = new System.Drawing.Size(785, 43);
+            nomeTextBox.TabIndex = 2;
             // 
             // telefonoTextBox
             // 
-            this.telefonoTextBox.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.telefonoTextBox.Location = new System.Drawing.Point(189, 121);
-            this.telefonoTextBox.Name = "telefonoTextBox";
-            this.telefonoTextBox.PlaceholderText = "N° telefono";
-            this.telefonoTextBox.Size = new System.Drawing.Size(239, 47);
-            this.telefonoTextBox.TabIndex = 4;
+            telefonoTextBox.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            telefonoTextBox.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            telefonoTextBox.Location = new System.Drawing.Point(397, 121);
+            telefonoTextBox.Name = "telefonoTextBox";
+            telefonoTextBox.PlaceholderText = "N° telefono";
+            telefonoTextBox.Size = new System.Drawing.Size(785, 47);
+            telefonoTextBox.TabIndex = 4;
             // 
             // noteTextBox
             // 
-            this.noteTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.noteTextBox.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.noteTextBox.Location = new System.Drawing.Point(446, 12);
-            this.noteTextBox.Multiline = true;
-            this.noteTextBox.Name = "noteTextBox";
-            this.noteTextBox.PlaceholderText = "Note";
-            this.noteTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.noteTextBox.Size = new System.Drawing.Size(517, 326);
-            this.noteTextBox.TabIndex = 5;
-            this.noteTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.noteTextBox_KeyPress);
+            noteTextBox.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            noteTextBox.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            noteTextBox.Location = new System.Drawing.Point(397, 174);
+            noteTextBox.Multiline = true;
+            noteTextBox.Name = "noteTextBox";
+            noteTextBox.PlaceholderText = "Note";
+            noteTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            noteTextBox.Size = new System.Drawing.Size(785, 191);
+            noteTextBox.TabIndex = 5;
+            noteTextBox.KeyPress += noteTextBox_KeyPress;
             // 
-            // label1
+            // codiceLabel
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(31, 23);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(107, 38);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Codice:";
+            codiceLabel.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            codiceLabel.AutoSize = true;
+            codiceLabel.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            codiceLabel.Location = new System.Drawing.Point(266, 26);
+            codiceLabel.Name = "codiceLabel";
+            codiceLabel.Size = new System.Drawing.Size(107, 38);
+            codiceLabel.TabIndex = 0;
+            codiceLabel.Text = "Codice:";
             // 
-            // label2
+            // nomeLabel
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(39, 74);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(99, 38);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Nome:";
+            nomeLabel.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            nomeLabel.AutoSize = true;
+            nomeLabel.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            nomeLabel.Location = new System.Drawing.Point(274, 75);
+            nomeLabel.Name = "nomeLabel";
+            nomeLabel.Size = new System.Drawing.Size(99, 38);
+            nomeLabel.TabIndex = 6;
+            nomeLabel.Text = "Nome:";
             // 
-            // label4
+            // telefonoLabel
             // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(9, 124);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(129, 38);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Telefono:";
+            telefonoLabel.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            telefonoLabel.AutoSize = true;
+            telefonoLabel.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            telefonoLabel.Location = new System.Drawing.Point(244, 127);
+            telefonoLabel.Name = "telefonoLabel";
+            telefonoLabel.Size = new System.Drawing.Size(129, 38);
+            telefonoLabel.TabIndex = 8;
+            telefonoLabel.Text = "Telefono:";
             // 
             // confermaButton
             // 
-            this.confermaButton.BackColor = System.Drawing.Color.PaleGreen;
-            this.confermaButton.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.confermaButton.Location = new System.Drawing.Point(16, 271);
-            this.confermaButton.Name = "confermaButton";
-            this.confermaButton.Size = new System.Drawing.Size(154, 70);
-            this.confermaButton.TabIndex = 6;
-            this.confermaButton.Text = "SALVA";
-            this.confermaButton.UseVisualStyleBackColor = false;
-            this.confermaButton.Click += new System.EventHandler(this.confermaButton_Click);
+            confermaButton.BackColor = System.Drawing.Color.PaleGreen;
+            confermaButton.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            confermaButton.Location = new System.Drawing.Point(12, 26);
+            confermaButton.Name = "confermaButton";
+            confermaButton.Size = new System.Drawing.Size(204, 70);
+            confermaButton.TabIndex = 6;
+            confermaButton.Text = "SALVA";
+            confermaButton.UseVisualStyleBackColor = false;
+            confermaButton.Click += confermaButton_Click;
             // 
             // annullaButton
             // 
-            this.annullaButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.annullaButton.Location = new System.Drawing.Point(176, 271);
-            this.annullaButton.Name = "annullaButton";
-            this.annullaButton.Size = new System.Drawing.Size(123, 70);
-            this.annullaButton.TabIndex = 7;
-            this.annullaButton.Text = "INDIETRO";
-            this.annullaButton.UseVisualStyleBackColor = true;
-            this.annullaButton.Click += new System.EventHandler(this.annullaButton_Click);
+            annullaButton.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            annullaButton.Location = new System.Drawing.Point(12, 160);
+            annullaButton.Name = "annullaButton";
+            annullaButton.Size = new System.Drawing.Size(204, 70);
+            annullaButton.TabIndex = 7;
+            annullaButton.Text = "INDIETRO";
+            annullaButton.UseVisualStyleBackColor = false;
+            annullaButton.Click += annullaButton_Click;
             // 
             // eliminaButton
             // 
-            this.eliminaButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.eliminaButton.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.eliminaButton.ForeColor = System.Drawing.Color.Black;
-            this.eliminaButton.Location = new System.Drawing.Point(305, 271);
-            this.eliminaButton.Name = "eliminaButton";
-            this.eliminaButton.Size = new System.Drawing.Size(123, 70);
-            this.eliminaButton.TabIndex = 9;
-            this.eliminaButton.Text = "CANC";
-            this.eliminaButton.UseVisualStyleBackColor = false;
-            this.eliminaButton.Click += new System.EventHandler(this.eliminaButton_Click);
+            eliminaButton.BackColor = System.Drawing.Color.FromArgb(255, 128, 128);
+            eliminaButton.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            eliminaButton.ForeColor = System.Drawing.Color.Black;
+            eliminaButton.Location = new System.Drawing.Point(12, 295);
+            eliminaButton.Name = "eliminaButton";
+            eliminaButton.Size = new System.Drawing.Size(204, 70);
+            eliminaButton.TabIndex = 9;
+            eliminaButton.Text = "CANCELLA";
+            eliminaButton.UseVisualStyleBackColor = false;
+            eliminaButton.Click += eliminaButton_Click;
+            // 
+            // noteLabel
+            // 
+            noteLabel.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            noteLabel.AutoSize = true;
+            noteLabel.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            noteLabel.Location = new System.Drawing.Point(289, 177);
+            noteLabel.Name = "noteLabel";
+            noteLabel.Size = new System.Drawing.Size(84, 38);
+            noteLabel.TabIndex = 10;
+            noteLabel.Text = "Note:";
             // 
             // Form1
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
-            this.ClientSize = new System.Drawing.Size(982, 353);
-            this.Controls.Add(this.eliminaButton);
-            this.Controls.Add(this.annullaButton);
-            this.Controls.Add(this.confermaButton);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.noteTextBox);
-            this.Controls.Add(this.telefonoTextBox);
-            this.Controls.Add(this.nomeTextBox);
-            this.Controls.Add(this.codiceTextBox);
-            this.Name = "Form1";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Text = "AddRecord";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
-            this.Load += new System.EventHandler(this.Form1_Load);
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
+            ClientSize = new System.Drawing.Size(1195, 391);
+            Controls.Add(noteLabel);
+            Controls.Add(eliminaButton);
+            Controls.Add(annullaButton);
+            Controls.Add(confermaButton);
+            Controls.Add(telefonoLabel);
+            Controls.Add(nomeLabel);
+            Controls.Add(codiceLabel);
+            Controls.Add(noteTextBox);
+            Controls.Add(telefonoTextBox);
+            Controls.Add(nomeTextBox);
+            Controls.Add(codiceTextBox);
+            Name = "Form1";
+            StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+            Text = "AddRecord";
+            FormClosing += Form1_FormClosing;
+            FormClosed += Form1_FormClosed;
+            Load += Form1_Load;
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -185,11 +195,12 @@
         private System.Windows.Forms.TextBox nomeTextBox;
         private System.Windows.Forms.TextBox telefonoTextBox;
         private System.Windows.Forms.TextBox noteTextBox;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label codiceLabel;
+        private System.Windows.Forms.Label nomeLabel;
+        private System.Windows.Forms.Label telefonoLabel;
         private System.Windows.Forms.Button confermaButton;
         private System.Windows.Forms.Button annullaButton;
         private System.Windows.Forms.Button eliminaButton;
+        private System.Windows.Forms.Label noteLabel;
     }
 }

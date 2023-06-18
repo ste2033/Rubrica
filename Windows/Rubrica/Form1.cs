@@ -27,10 +27,10 @@ namespace Rubrica
             nomeTextBox.Text = nome;
             telefonoTextBox.Text = telefono;
 
-            if(note != "")
+            if (note != "")
             {
                 noteTextBox.Text = note;
-                noteTextBox.Text = noteTextBox.Text.Replace("§",System.Environment.NewLine); //add a line terminating ;
+                noteTextBox.Text = noteTextBox.Text.Replace("§", System.Environment.NewLine); //add a line terminating ;
             }
 
             INDEX = index;
@@ -182,7 +182,7 @@ namespace Rubrica
 
         private void noteTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar.ToString() == "|" || e.KeyChar.ToString() == "§") 
+            if (e.KeyChar.ToString() == "|" || e.KeyChar.ToString() == "§")
             {
                 e.Handled = true;
             }
