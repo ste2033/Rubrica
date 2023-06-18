@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="vertical"
+    android:fitsSystemWindows="true"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="1257dp"
+        android:layout_height="790dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="top"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="10dp"
+        tools:layout_editor_absoluteY="10dp">
+
+        <!--Codice-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="top"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="10dp"
+                android:text="Codice: "
+                android:textSize="30dp" />
+
+            <EditText
+                android:id="@+id/codiceInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Codice"
+                android:textSize="30dp"></EditText>
+        </LinearLayout>
+
+        <!--Nome-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="top"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="10dp"
+                android:text="Nome: "
+                android:textSize="30dp" />
+
+            <EditText
+                android:id="@+id/nomeInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nome"
+                android:textSize="30dp"></EditText>
+        </LinearLayout>
+
+        <!--Telefono-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="top"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="10dp"
+                android:text="Telefono: "
+                android:textSize="30dp" />
+
+            <EditText
+                android:id="@+id/telefonoInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Telefono"
+                android:textSize="30dp"></EditText>
+        </LinearLayout>
+
+        <!--Note-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="top"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="10dp"
+                android:text="Note: "
+                android:textSize="30dp" />
+
+            <EditText
+                android:id="@+id/noteInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:hint="Note"
+                android:inputType="textMultiLine"
+                android:lines="6"
+                android:scrollbars="vertical"
+                android:textSize="30dp"></EditText>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        >
+
+        <Button
+            android:id="@+id/salvaButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Salva"
+            android:textSize="30dp"
+            android:layout_weight="1"
+            ></Button>
+
+        <Button
+            android:id="@+id/annullaButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Annulla"
+            android:textSize="30dp"
+            android:layout_weight="1"
+            ></Button>
+
+        <Button
+            android:id="@+id/eliminaButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cancella"
+            android:textSize="30dp"
+            android:layout_weight="1"
+            ></Button>
+    </LinearLayout>
+
+</RelativeLayout>
