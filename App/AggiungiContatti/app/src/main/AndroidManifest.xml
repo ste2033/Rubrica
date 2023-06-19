@@ -2,11 +2,14 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <!--Per leggere i dati dalla memoria-->
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"></uses-permission>
+    <!--Per controllare i dati dalla memoria-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
-    <!--Per scrivere sulla memoria-->
-    <uses-permission android:name="android.permission.WRITE_CONTACTS"></uses-permission>
+
+    <!--Per leggere i dati dalla memoria ESTERNA-->
+    <uses-permission  android:name="android.permission.MANAGE_EXTERNAL_STORAGE"></uses-permission>
+
 
     <application
         android:allowBackup="true"
@@ -22,7 +25,7 @@
             android:name=".MainActivity"
             android:exported="true"
             android:windowSoftInputMode="adjustNothing">
-        <intent-filter>
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
